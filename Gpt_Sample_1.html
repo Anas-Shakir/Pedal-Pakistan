@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PakCyclists – Cycling Community of Pakistan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+    }
+    header {
+      background: #0f766e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { margin: 0; font-size: 1.4rem; }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: white;
+    }
+    .hero h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p { max-width: 600px; margin: 0 auto 1.5rem; }
+    .btn {
+      background: white;
+      color: #0f766e;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .card h3 { margin-top: 0; }
+    footer {
+      background: #0f766e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .form-group { margin-bottom: 1rem; }
+    input, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #0f766e;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🚴 PakCyclists</h1>
+  <nav>
+    <a href="#clubs">Clubs</a>
+    <a href="#routes">Safe Routes</a>
+    <a href="#meetups">Meetups</a>
+    <a href="#leaderboard">Leaderboard</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Pakistan’s Cycling Community</h2>
+  <p>Connect with cyclists across Pakistan. Find clubs, safe routes, casual meetups, and ride together.</p>
+  <a class="btn" href="#signup">Join the Community</a>
+</section>
+
+<section id="clubs">
+  <h2>🚴 Cycling Clubs</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Lahore Morning Riders</h3>
+      <p>Early morning road cycling group.</p>
+    </div>
+    <div class="card">
+      <h3>Islamabad Trail Cyclists</h3>
+      <p>Trail & endurance focused riders.</p>
+    </div>
+    <div class="card">
+      <h3>Karachi Night Cyclers</h3>
+      <p>Casual night rides & meetups.</p>
+    </div>
+  </div>
+</section>
+
+<section id="routes">
+  <h2>🛣️ Safe Routes (Upvoted)</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Canal Road – Lahore</h3>
+      <p>⭐⭐⭐⭐☆ (120 upvotes)</p>
+    </div>
+    <div class="card">
+      <h3>Margalla Road – Islamabad</h3>
+      <p>⭐⭐⭐⭐⭐ (200 upvotes)</p>
+    </div>
+  </div>
+</section>
+
+<section id="meetups">
+  <h2>📅 Scheduled Meetups</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Sunday Ride – Lahore</h3>
+      <p>6:00 AM · Liberty Roundabout</p>
+    </div>
+    <div class="card">
+      <h3>Trail Ride – Islamabad</h3>
+      <p>7:00 AM · Trail 3 Parking</p>
+    </div>
+  </div>
+</section>
+
+<section id="leaderboard">
+  <h2>🏆 Leaderboard</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Ahmed R.</h3>
+      <p>320 km this month</p>
+    </div>
+    <div class="card">
+      <h3>Fatima S.</h3>
+      <p>290 km this month</p>
+    </div>
+  </div>
+</section>
+
+<section id="signup">
+  <h2>🙌 Join PakCyclists</h2>
+  <div class="card">
+    <div class="form-group">
+      <input type="text" placeholder="Your Name" />
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Email" />
+    </div>
+    <div class="form-group">
+      <textarea placeholder="City & cycling interests"></textarea>
+    </div>
+    <button>Sign Up</button>
+    <p style="font-size:0.9rem; opacity:0.7;">(MVP – no payment, free community)</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 PakCyclists · Built for cyclists of Pakistan</p>
+</footer>
+
+</body>
+</html>
