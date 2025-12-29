@@ -225,6 +225,8 @@
     const email = document.getElementById("email").value.trim();
     const city = document.getElementById("city").value.trim();
     const status = document.getElementById("status");
+    loadSignupCount();
+
 
     if (!name || !email) {
       status.innerText = "⚠️ Name and email are required.";
