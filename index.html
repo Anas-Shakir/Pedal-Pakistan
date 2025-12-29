@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -99,6 +99,11 @@
 <section class="hero">
   <h2>Pakistan’s Cycling Community</h2>
   <p>Connect with cyclists across Pakistan. Find clubs, safe routes, casual meetups, and ride together.</p>
+  <!-- -->
+  <p id="counter" style="margin-top:1rem; font-weight:bold; font-size:1.1rem;">
+    🔥 Loading community stats...
+  </p>
+   
   <a class="btn" href="#signup">Join the Community</a>
 </section>
 
@@ -176,16 +181,33 @@
     </div>
     <button onclick="submitSignup()">Sign Up</button>
     <p id="status" style="font-size:0.9rem; opacity:0.7;">(MVP – no payment, free community)</p>
+    <!---->
+    <script>
+      async function loadSignupCount() {
+        const counter = document.getElementById("counter");
+    
+        const { count, error } = await supabaseClient
+          .from("signups")
+          .select("*", { count: "exact", head: true });
+    
+        if (error) {
+          console.error(error);
+          counter.innerText = "⚠️ Unable to load stats";
+        } else {
+          counter.innerText = `🔥 ${count} cyclists have joined PakCyclists`;
+        }
+      }
+    
+      // Load count when page opens
+      loadSignupCount();
+    </script>
+    <!---->    
   </div>
 </section>
 
 <footer>
   <p>© 2025 PakCyclists · Built for cyclists of Pakistan</p>
 </footer>
-
-
-
-
 
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
